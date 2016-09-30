@@ -21,7 +21,7 @@
       <% @restaurants.each do |restaurant| %>
       <tr>
         <td><%= restaurant.name %></td>
-        <td><%= restaurant.neighborhood %></td>
+        <td><%= restaurant.neighborhood.neighborhood %></td>
         <td><%= restaurant.address %></td>
         <td><%= restaurant.website %></td>
         <td><%= restaurant.coverphoto_id %></td>
