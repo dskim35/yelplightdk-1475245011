@@ -33,7 +33,7 @@
           Neighborhood
         </label>
 
-        <input type="text" id="neighborhood" name="neighborhood" placeholder="Neighborhood" class="form-control" value="<%= @restaurant.neighborhood %>">
+        <%= select_tag(:neighborhood, options_from_collection_for_select(Neighborhood.all, :id, :neighborhood, @restaurant.neighborhood), :class => "form-control") %>
       </div>
 
       <!-- Label and input for address -->
