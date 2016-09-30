@@ -26,3 +26,23 @@
     </div>
   </div>
 </div>
+
+<!-- A Tag has many photos -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Photos
+      </li>
+
+      <% @tag.photos.each do |photo| %>
+        <li class="list-group-item">
+          <a href="/photos/<%= photo.id %>">
+            <%= photo.photo %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
